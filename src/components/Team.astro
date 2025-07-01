@@ -1,0 +1,277 @@
+---
+// Team component
+const teamMembers = [
+  {
+    name: "Srihari Krishnan.S",
+    title: "Creative Developer, Hardware Designer, IOT Automation Specialist",
+    bio: "Innovative creator blending code, circuits, and connectivity to build smart, seamless solutions for the future.",
+    image:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&w=400&h=400&fit=crop&crop=face",
+    services: ["Circuit Designer", "IOT", "Embedded Systems"],
+    portfolio: "https://sriharikrishnansrinivasan.github.io/",
+  },
+  {
+    name: "PRAVEEN KUMAR S",
+    title: "FULL STACK DEVELOPER & UI/UX DESIGNER",
+    bio: "Building intelligent systems that transform data into actionable insights and competitive advantages.",
+    image:
+      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&w=400&h=400&fit=crop&crop=face",
+    services: ["HTML", "JS,CSS", "MONGO DB"],
+    portfolio: "https://praveenkumar-2025.github.io/",
+  },
+  {
+    name: "SHYAMALAN.V",
+    title: "3D ARTIST & MULTIMEDIA DESIGNER",
+    bio: "Creating immersive digital experiences through cutting-edge 3D modeling, animation.",
+    image:
+      "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-4.0.3&w=400&h=400&fit=crop&crop=face",
+    services: ["After effects", "Blender Designer", "Video Editing"],
+    portfolio: "https://shyamalan.netlify.app/",
+  },
+  {
+    name: "Adithya R",
+    title: "Cyber Threat Intelligence (CTI) Analyst/ Vulnerability Analyst",
+    bio: "analyzes, and reports on cyber threats to help organizations proactively defend their digital assets, while a Vulnerability Analyst specializes in detecting, assessing, and prioritizing security weaknesses within systems to prevent exploitation.",
+    image:
+      "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&w=400&h=400&fit=crop&crop=face",
+    services: ["Vulnerability Reporting", "Cyber Strategy", "Backend Security"],
+    portfolio: "https://adithyar.netlify.app/",
+  },
+  {
+    name: "N K SAAI HARSHAAL",
+    title: "Precision 3D Designs | CAD & SolidWorks Architect",
+    bio: "As a mechanical design engineer with extensive experience in 3D modeling and product development, I specialize in creating precision-engineered solutions using SolidWorks and advanced CAD systems.",
+    image:
+      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&w=400&h=400&fit=crop&crop=face",
+    services: ["solidworks", "CAD", "fusion"],
+    portfolio: "https://saaiharshaal.netlify.app/",
+  },
+  {
+    name: "Giridhar Gopalan Murali",
+    title: "Cinematographer",
+    bio: "Transforming visions into visual masterpieces through innovative cinematography, expert color grading, and compelling storytelling that captivates audiences.",
+    image:
+      "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?ixlib=rb-4.0.3&w=400&h=400&fit=crop&crop=face",
+    services: ["DaVinci Resolve", "Video Editing", "Direction"],
+    portfolio: "https://giridhargopalanmurali.netlify.app/",
+  },
+  {
+    name: "SANJAY SAGAR",
+    title: "Full Stack Developer",
+    bio: "A developer who loves bringing ideas to life with code. Always up for a challenge and passionate about creating innovative solutions.",
+    image:
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&w=400&h=400&fit=crop&crop=face",
+    services: ["React.js", "JavaScript", "MongoDB"],
+    portfolio: "https://sanjaysagar.com/",
+  },
+];
+---
+
+<section class="team-section" id="team">
+  <div class="container">
+    <div class="section-title">
+      <h2>Our Elite Professionals</h2>
+      <p>
+        Meet the visionary experts powering our virtual collective with
+        unparalleled skills and innovation
+      </p>
+    </div>
+
+    <div class="team-grid">
+      {
+        teamMembers.map((member) => (
+          <div class="profile-card">
+            <div class="card-header">
+              <img src={member.image} alt={member.name} class="profile-pic" />
+            </div>
+            <div class="card-body">
+              <h3 class="profile-name">{member.name}</h3>
+              <div class="profile-title">{member.title}</div>
+              <p class="profile-bio">{member.bio}</p>
+
+              <div class="profile-services">
+                {member.services.map((service) => (
+                  <span class="service-tag">{service}</span>
+                ))}
+              </div>
+
+              <div class="card-footer">
+                <a
+                  href={member.portfolio}
+                  class="profile-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Portfolio <i class="fas fa-arrow-right" />
+                </a>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Team Section */
+  .team-section {
+    padding: 150px 0 100px;
+    position: relative;
+  }
+
+  .section-title {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+  .section-title h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .section-title p {
+    color: var(--text-light);
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+  }
+
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 40px;
+  }
+
+  /* Profile Card */
+  .profile-card {
+    background: var(--glass);
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    position: relative;
+    z-index: 1;
+    border: 1px solid rgba(255, 107, 53, 0.1);
+    backdrop-filter: blur(10px);
+    transform-style: preserve-3d;
+    perspective: 1000px;
+  }
+
+  .profile-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: var(--shadow-hover);
+    border: 1px solid rgba(255, 107, 53, 0.3);
+  }
+
+  .card-header {
+    position: relative;
+    height: 220px;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 107, 53, 0.1),
+      rgba(247, 147, 30, 0.1)
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .profile-pic {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 5px solid rgba(255, 107, 53, 0.2);
+    object-fit: cover;
+    position: absolute;
+    bottom: -70px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+  }
+
+  .profile-card:hover .profile-pic {
+    transform: scale(1.05) rotate(5deg);
+    border-color: rgba(255, 107, 53, 0.5);
+  }
+
+  .card-body {
+    padding: 90px 30px 30px;
+    text-align: center;
+  }
+
+  .profile-name {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+    color: var(--text-dark);
+  }
+
+  .profile-title {
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+  }
+
+  .profile-bio {
+    color: var(--text-light);
+    margin-bottom: 25px;
+    font-size: 1rem;
+    min-height: 80px;
+  }
+
+  .profile-services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+
+  .service-tag {
+    background: rgba(255, 107, 53, 0.1);
+    color: var(--primary);
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: var(--transition);
+    border: 1px solid rgba(255, 107, 53, 0.2);
+  }
+
+  .profile-card:hover .service-tag {
+    background: rgba(255, 107, 53, 0.2);
+    transform: translateY(-3px);
+  }
+
+  .card-footer {
+    display: flex;
+    justify-content: center;
+    padding: 0 25px 30px;
+  }
+
+  .profile-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 600;
+    transition: var(--transition);
+    font-size: 1.1rem;
+  }
+
+  .profile-link:hover {
+    color: var(--accent);
+    transform: translateX(8px);
+  }
+</style>

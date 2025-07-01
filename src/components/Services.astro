@@ -1,0 +1,202 @@
+---
+// Services component
+---
+
+<section class="services-section" id="services">
+  <div class="container">
+    <div class="section-title">
+      <h2>Our Premium Services</h2>
+      <p>Comprehensive solutions tailored to your business needs</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-laptop-code"></i>
+        </div>
+        <h3>Web Development</h3>
+        <p>
+          Custom websites and applications built with cutting-edge technologies
+          for optimal performance.
+        </p>
+        <a href="#" class="profile-link">Learn More</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-paint-brush"></i>
+        </div>
+        <h3>UI/UX Design</h3>
+        <p>
+          Beautiful, intuitive interfaces designed to enhance user experience
+          and engagement.
+        </p>
+        <a href="#" class="profile-link">Learn More</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-bullhorn"></i>
+        </div>
+        <h3>Digital Marketing</h3>
+        <p>
+          Strategic marketing campaigns that drive growth and maximize your
+          online presence.
+        </p>
+        <a href="#" class="profile-link">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Services Section */
+  .services-section {
+    padding: 100px 0;
+    position: relative;
+  }
+
+  .section-title {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+  .section-title h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .section-title p {
+    color: var(--text-light);
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+  }
+
+  .service-card {
+    background: var(--glass);
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: var(--transition);
+    border: 1px solid rgba(255, 107, 53, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+    border: 1px solid rgba(255, 107, 53, 0.3);
+  }
+
+  .service-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 107, 53, 0.05),
+      rgba(247, 147, 30, 0.05)
+    );
+    opacity: 0;
+    transition: var(--transition);
+    border-radius: 20px;
+    z-index: -1;
+  }
+
+  .service-card:hover::before {
+    opacity: 1;
+  }
+
+  .service-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    font-size: 32px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-icon::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      45deg,
+      transparent,
+      rgba(255, 255, 255, 0.1),
+      transparent
+    );
+    transform: rotate(45deg);
+    transition: var(--transition);
+    opacity: 0;
+  }
+
+  .service-card:hover .service-icon::after {
+    opacity: 1;
+    animation: shine 0.8s ease-out;
+  }
+
+  @keyframes shine {
+    0% {
+      transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    }
+    100% {
+      transform: translateX(100%) translateY(100%) rotate(45deg);
+    }
+  }
+
+  .service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+  }
+
+  .service-card p {
+    color: var(--text-light);
+    margin-bottom: 20px;
+  }
+
+  .profile-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 600;
+    transition: var(--transition);
+    font-size: 1.1rem;
+  }
+
+  .profile-link:hover {
+    color: var(--accent);
+    transform: translateX(8px);
+  }
+</style>

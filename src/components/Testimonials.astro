@@ -1,0 +1,143 @@
+---
+// Testimonials component
+const testimonials = [
+  {
+    name: "Michael Thompson",
+    position: "CEO, TechInnovate",
+    image:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&w=150&h=150&fit=crop&crop=face",
+    content:
+      "Working with Nexus Collective transformed our digital presence. Their team of experts delivered beyond our expectations with innovative solutions and exceptional professionalism.",
+  },
+  {
+    name: "Sarah Johnson",
+    position: "Marketing Director, GrowthCorp",
+    image:
+      "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&w=150&h=150&fit=crop&crop=face",
+    content:
+      "The level of creativity and technical expertise from Nexus Collective is unmatched. They helped us achieve our goals faster than we ever imagined possible.",
+  },
+  {
+    name: "David Chen",
+    position: "CTO, StartupX",
+    image:
+      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&w=150&h=150&fit=crop&crop=face",
+    content:
+      "Nexus Collective's virtual team model is the future of work. Their professionals are top-notch and delivered results that exceeded our expectations.",
+  },
+];
+---
+
+<section class="testimonials-section" id="clients">
+  <div class="container">
+    <div class="section-title">
+      <h2>Client Testimonials</h2>
+      <p>What our clients say about working with our professionals</p>
+    </div>
+
+    <div class="testimonials-grid">
+      {
+        testimonials.map((testimonial) => (
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <img
+                src={testimonial.image}
+                alt={testimonial.name}
+                class="testimonial-pic"
+              />
+              <div class="testimonial-info">
+                <h4>{testimonial.name}</h4>
+                <p>{testimonial.position}</p>
+              </div>
+            </div>
+            <div class="testimonial-content">"{testimonial.content}"</div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Testimonials */
+  .testimonials-section {
+    padding: 100px 0;
+    position: relative;
+  }
+
+  .section-title {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+  .section-title h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .section-title p {
+    color: var(--text-light);
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+  }
+
+  .testimonial-card {
+    background: var(--glass);
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid rgba(255, 107, 53, 0.1);
+    backdrop-filter: blur(10px);
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+  }
+
+  .testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+  }
+
+  .testimonial-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .testimonial-pic {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 2px solid var(--primary);
+  }
+
+  .testimonial-info h4 {
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    margin-bottom: 5px;
+  }
+
+  .testimonial-info p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+  }
+
+  .testimonial-content {
+    color: var(--text-light);
+    font-style: italic;
+    line-height: 1.7;
+  }
+</style>

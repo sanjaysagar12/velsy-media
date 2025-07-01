@@ -1,0 +1,204 @@
+---
+// Footer component
+---
+
+<footer id="contact">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-about">
+        <div class="footer-logo">Velsy Media</div>
+        <p>
+          Transforming digital experiences through innovative design and cutting-edge development. 
+          We create compelling content and build powerful online presences that drive results.
+        </p>
+
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a
+          >
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn"
+            ><i class="fab fa-linkedin-in"></i></a
+          >
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a
+          >
+          <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="/#services"><i class="fas fa-cogs"></i> Services</a></li>
+          <li><a href="/#team"><i class="fas fa-users"></i> Team</a></li>
+          <li>
+            <a href="/#testimonials"><i class="fas fa-star"></i> Testimonials</a>
+          </li>
+          <li>
+            <a href="/contact"><i class="fas fa-envelope"></i> Contact</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h3>Services</h3>
+        <ul>
+          <li>
+            <a href="/#services"><i class="fas fa-laptop-code"></i> Web Development</a>
+          </li>
+          <li>
+            <a href="/#services"><i class="fas fa-paint-brush"></i> UI/UX Design</a>
+          </li>
+          <li>
+            <a href="/#services"><i class="fas fa-bullhorn"></i> Digital Marketing</a>
+          </li>
+          <li>
+            <a href="/#services"><i class="fas fa-video"></i> Content Creation</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h3>Contact Info</h3>
+        <ul>
+          <li>
+            <a href="mailto:hello@velsymedia.com"
+              ><i class="fas fa-envelope"></i> hello@velsymedia.com</a
+            >
+          </li>
+          <li>
+            <a href="tel:+1234567890"
+              ><i class="fas fa-phone"></i> +1 (234) 567-8900</a
+            >
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <p>&copy; Designed with ❤️ by our Velsy Media team.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  /* Footer */
+  footer {
+    background: rgba(44, 44, 44, 0.95);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 80px 0 40px;
+    border-top: 1px solid rgba(255, 107, 53, 0.2);
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+
+  .footer-logo {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .footer-about {
+    max-width: 400px;
+  }
+
+  .footer-about p {
+    color: #cccccc;
+    margin-bottom: 25px;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 15px;
+  }
+
+  .social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    background: rgba(255, 107, 53, 0.1);
+    color: white;
+    transition: var(--transition);
+    font-size: 18px;
+    border: 1px solid rgba(255, 107, 53, 0.2);
+  }
+
+  .social-links a:hover {
+    background: var(--primary);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+  }
+
+  .footer-links h3 {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+    position: relative;
+    color: white;
+    font-weight: 700;
+  }
+
+  .footer-links h3:after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 50px;
+    height: 4px;
+    background: var(--primary);
+    border-radius: 10px;
+  }
+
+  .footer-links ul {
+    list-style: none;
+  }
+
+  .footer-links li {
+    margin-bottom: 15px;
+  }
+
+  .footer-links a {
+    color: #cccccc;
+    text-decoration: none;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .footer-links a i {
+    color: var(--primary);
+    transition: var(--transition);
+  }
+
+  .footer-links a:hover {
+    color: white;
+    padding-left: 5px;
+  }
+
+  .footer-links a:hover i {
+    transform: rotate(10deg);
+  }
+
+  .copyright {
+    text-align: center;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255, 107, 53, 0.2);
+    color: #cccccc;
+    font-size: 1rem;
+  }
+</style>
