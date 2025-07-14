@@ -1,61 +1,59 @@
 ---
 // Testimonials component
-const testimonials = [
+// Client Projects component
+const projects = [
   {
-    name: "Michael Thompson",
-    position: "CEO, TechInnovate",
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&w=150&h=150&fit=crop&crop=face",
+    name: "Sastika Solutions",
+    position: "Manpower & Overseas Education Agency",
+    image: "https://sastika.eu/logo.svg",
     content:
-      "Working with Velsy Media transformed our digital presence. Their team of experts delivered beyond our expectations with innovative solutions and exceptional professionalism.",
-  },
+      "We helped Sastika Solutions build a strong digital presence to support their recruitment services and overseas education programs. From website design to SEO, we created a platform that speaks to students and job seekers across Europe and beyond.",
+    },
   {
-    name: "Sarah Johnson",
-    position: "Marketing Director, GrowthCorp",
-    image:
-      "https://images.pexels.com/photos/3793611/pexels-photo-3793611.jpeg",
+    name: "MKM Group",
+    position: "Logistics & Leather Manufacturing",
+    image: "https://yourdomain.com/path-to-mkm-logo-or-image.jpg", // replace with actual image
     content:
-      "The level of creativity and technical expertise from Velsy Media is unmatched. They helped us achieve our goals faster than we ever imagined possible.",
-  },
+      "For MKM Group, we built a professional website and brand identity that reflects their presence in logistics and leather manufacturing. Our team also supported their digital outreach with tailored content and creative assets.",
+    },
   {
-    name: "David Chen",
-    position: "CTO, StartupX",
-    image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&w=150&h=150&fit=crop&crop=face",
+    name: "Healthy Bake",
+    position: "Organic & Health Food Brand",
+    image: "/healthu-bakers-logo.jpg", // replace with actual image
     content:
-      "Velsy Media's virtual team model is the future of work. Their professionals are top-notch and delivered results that exceeded our expectations.",
+      "We managed Healthy Bake's branding and marketing — including social media creatives and digital campaigns — to help them reach health-conscious customers.",
   },
 ];
+
 ---
 
 <section class="testimonials-section" id="clients">
-  <div class="container">
-    <div class="section-title">
-      <h2>Client Testimonials</h2>
-      <p>What our clients say about working with our professionals</p>
-    </div>
-
-    <div class="testimonials-grid">
-      {
-        testimonials.map((testimonial) => (
-          <div class="testimonial-card">
-            <div class="testimonial-header">
-              <img
-                src={testimonial.image}
-                alt={testimonial.name}
-                class="testimonial-pic"
-              />
-              <div class="testimonial-info">
-                <h4>{testimonial.name}</h4>
-                <p>{testimonial.position}</p>
-              </div>
-            </div>
-            <div class="testimonial-content">"{testimonial.content}"</div>
-          </div>
-        ))
-      }
-    </div>
+  <div class="section-title">
+    <h2>Client Projects</h2>
+    <p>Here’s a glimpse of what we’ve done for some of our amazing clients.</p>
   </div>
+
+  <div class="testimonials-grid">
+    {
+      projects.map((project) => (
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <img
+              src={project.image}
+              alt={project.name}
+              class="testimonial-pic"
+            />
+            <div class="testimonial-info">
+              <h4>{project.name}</h4>
+              <p>{project.position}</p>
+            </div>
+          </div>
+          <div class="testimonial-content">{project.content}</div>
+        </div>
+      ))
+    }
+  </div>
+
 </section>
 
 <style>
